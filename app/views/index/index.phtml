@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>The Vulnerator</title>
+    <meta name="description" content="Vulnerabilities searching testing online">
+    <meta name="author" content="george popoff">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header>
+    <ul>
+        <li>
+            <?php echo $this->tag->linkTo(
+                "",
+                "Домой"
+            )?>
+        </li>
+        <li>
+            <?php echo $this->tag->linkTo(
+                    "signup",
+                    "Войти"
+            )?>
+        </li>
+        <li>
+            <?php echo $this->tag->linkTo(
+                "signin",
+                "Регистрация"
+            )?>
+        </li>
+    </ul>
+</header>
+    <h1>Welcome to Vulnerator application! Vulnerator is vulnerabilities searching web tool!</h1>
+
+    <?= $this->tag->form("index/attack") ?>
+        <label for="url">Url to attack</label>
+        <?= $this->tag->textField("url") ?>
+        <label for="level">Scan Level (number)</label>
+        <?= $this->tag->textField("level") ?>
+        <?= $this->tag->submitButton("attack!") ?>
+    <?= $this->tag->endForm() ?>
+</body>
+</html>

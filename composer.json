@@ -1,0 +1,17 @@
+{
+  "name": "breezesoftware/vulnerator",
+  "description": "Vulnerabilities searching tool",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "george popoff",
+      "email": "popoff96@live.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Vulnerator\\": "app/classes"
+    }
+  }
+}

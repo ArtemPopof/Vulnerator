@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Машинное обучение. Девушки - Регистрация.</title>
+    <meta name="description" content="Машинное обучение знакомства регистрация">
+    <meta name="author" content="george popoff">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header>
+    <ul>
+        <li>
+            <?php echo $this->tag->linkTo(
+                "",
+                "Домой"
+            )?>
+        </li>
+        <li>
+            <?php echo $this->tag->linkTo(
+                "signup",
+                "Войти"
+            )?>
+        </li>
+        <li>
+            <?php echo $this->tag->linkTo(
+                "signin",
+                "Регистрация"
+            )?>
+        </li>
+    </ul>
+</header>
+<h1>Регистрация</h1>
+<?php echo $this->tag->form("signup/register");?>
+    <p>
+        <label for="name">Имя</label>
+        <?php echo $this->tag->textField("name"); ?>
+    </p><p>
+        <label for="email">Почта</label>
+        <?php echo $this->tag->textField("email"); ?>
+    </p><p>
+        <label for="submit"></label>
+        <?php echo $this->tag->submitButton("submit"); ?>
+    </p>
+</form>
+
+</body>
+</html>
